@@ -35,7 +35,7 @@ public class T03CopyFile {
 					fos.close();
 				}
 			} catch (Exception e2) {
-				// TODO: handle exception
+
 			}	
 		}
 	}

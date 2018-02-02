@@ -33,7 +33,6 @@ public class T01FileInputStream {
 				fis.close();
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

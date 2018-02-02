@@ -14,7 +14,7 @@ import java.io.FileWriter;
 import org.junit.Test;
 
 //使用缓冲流可以提高文件操作的效率.通常都使用缓冲流
-public class Test05Buffered {
+public class T05Buffered {
 	public void test1() throws Exception{
 		//将节点流对象作为参数创建缓冲流
 		BufferedInputStream bis=null;

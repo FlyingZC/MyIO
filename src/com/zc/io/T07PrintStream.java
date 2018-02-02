@@ -10,7 +10,7 @@ import org.junit.Test;
 //System.out返回一个打印流对象
 //System.out.println()打印流里的println()方法
 //可以将
-public class Test07PrintStream {
+public class T07PrintStream {
 	
 	@Test
 	public void test1(){

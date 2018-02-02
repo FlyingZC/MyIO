@@ -16,7 +16,7 @@ import java.io.OutputStreamWriter;
 import org.junit.Test;
 
 //转换流
-public class Test06OtherStream {
+public class T06OtherStream {
 	//转换流
 	@Test
 	public void test1() throws Exception{

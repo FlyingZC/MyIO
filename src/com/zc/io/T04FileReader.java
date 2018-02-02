@@ -8,7 +8,7 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-public class Test04FileReader {
+public class T04FileReader {
 
 	@Test
 	public void test1() throws IOException{

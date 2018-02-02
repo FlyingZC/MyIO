@@ -45,7 +45,6 @@ public class T04FileReaderAndWriter {
 				try {
 					fr.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -53,7 +52,6 @@ public class T04FileReaderAndWriter {
 				try {
 					fw.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
