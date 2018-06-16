@@ -10,18 +10,18 @@ import org.junit.Test;
 
 public class PropertiesUtil
 {
-    private static Map<String,String> cachMap = new HashMap<String,String>();
-    
+    private static Map<String, String> cachMap = new HashMap<String, String>();
+
     static
     {
         Properties props = new Properties();
         try
         {
-            String rootPath=PropertiesUtil.class.getClassLoader().getResource("//").getPath();
+            String rootPath = PropertiesUtil.class.getClassLoader().getResource("//").getPath();
             props.load(new FileInputStream(rootPath + "oracle.properties"));
-            for(Map.Entry<Object, Object> every : props.entrySet())
+            for (Map.Entry<Object, Object> every : props.entrySet())
             {
-                cachMap.put((String)every.getKey(), (String)every.getValue());
+                cachMap.put((String) every.getKey(), (String) every.getValue());
             }
         }
         catch (IOException e)
@@ -29,12 +29,12 @@ public class PropertiesUtil
             e.printStackTrace();
         }
     }
-    
+
     public static String getProperty(String key)
     {
         return cachMap.get(key);
     }
-    
+
     @Test
     public void test()
     {

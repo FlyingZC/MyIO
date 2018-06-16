@@ -66,7 +66,7 @@ class FileTree implements Iterable<File>
         }
         return tree;
     }
-    
+
     @Override
     public String toString()
     {

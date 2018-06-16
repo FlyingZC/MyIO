@@ -97,7 +97,7 @@ public class EncodeUtil
                 Pattern p = Pattern.compile(repStr);
                 Matcher m = p.matcher(f.getAbsolutePath());
                 String newDirName = m.replaceFirst(repStr + "Copy");
-                
+
                 File descDir = new File(newDirName);
                 if (!descDir.exists())
                 {

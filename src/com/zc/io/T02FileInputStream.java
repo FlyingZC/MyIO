@@ -9,16 +9,19 @@ import org.junit.Test;
 
 public class T02FileInputStream
 {
-    //从硬盘存在的文件中.读取内容
+    /**
+     * 输入流从硬盘存在的文件中.读取内容
+     * 此例,一个字节一个字节的读取
+     * */
     @Test
-    public void test1() throws IOException
+    public void testFileInputStream() throws IOException
     {
         File file = new File("hello.txt");
         FileInputStream fis = new FileInputStream(file);
-        //read()一个字节一个字节的读byte,从输入流中读取一个数据字节.返回下一个数据字节,若已到达文件末尾,返回-1
-        //与read(byte[] b)的区别:read(byte[] b)从输入流中 将最多b.length的字节数据 读入到一个byte[]数组中.
-        //返回读入缓冲区的字节总数,若因为已到达文件末尾而没有更多的数据,则返回-1
-       
+        //fis.read()一个字节一个字节的读byte,从输入流中读取一个数据字节.返回下一个数据字节,若已到达文件末尾,返回-1
+        //与fis.read(byte[] b)的区别:fis.read(byte[] b)从输入流中 将最多b.length的字节数据 读入到一个byte[]数组中.
+        //int fis.read(byte[] b)返回读入缓冲区的字节总数,若已读取到文件末尾而没有更多的数据,则返回-1
+
         /*int b=fis.read();
         //没读到结尾
         while(b!=-1){
@@ -26,7 +29,7 @@ public class T02FileInputStream
         	System.out.println((char)b);
         	b=fis.read();
         }*/
-        int b;//保存读取的字节
+        int b;// 保存读取的字节
         //简写
         while (((b = fis.read()) != -1))
         {
@@ -36,8 +39,11 @@ public class T02FileInputStream
         fis.close();
     }
 
+    /**
+     * 此例,每次读取一个字节数组
+     */
     @Test
-    public void test2()
+    public void testFileInputStream2()
     {
         File file = new File("hello.txt");
         FileInputStream fis = null;
@@ -59,7 +65,6 @@ public class T02FileInputStream
         }
         catch (IOException e)
         {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try
@@ -71,7 +76,6 @@ public class T02FileInputStream
         }
         catch (IOException e)
         {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

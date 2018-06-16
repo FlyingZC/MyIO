@@ -42,7 +42,7 @@ public class EncodeUtil2
 
     private void makeCopyDir(String baseDir)
     {
-        baseDir.replace(originalDirName,originalDirName+"Copy" );
+        baseDir.replace(originalDirName, originalDirName + "Copy");
         Pattern p = Pattern.compile(originalDirName);
         Matcher m = p.matcher(baseDir);
         String newDirName = m.replaceFirst(originalDirName + "Copy");

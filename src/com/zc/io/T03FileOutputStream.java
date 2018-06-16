@@ -9,17 +9,20 @@ import org.junit.Test;
 
 public class T03FileOutputStream
 {
-    //写一个文件到硬盘
+    /**
+     * FileOutputStream写一个文件到硬盘
+     * */
     @Test
-    public void test1()
+    public void testFileOutputStream1()
     {
-        //物理文件可以不存在.自动创建
+        //物理文件可以不存在.自动创建.但目录必须存在,且文件必须可创建
         File file = new File("hello2.txt");
         FileOutputStream fos = null;
         try
         {
             fos = new FileOutputStream(file);
             //new String("I love China").getBytes():将字符串转换为字节数组
+            // fos.write(byte[]) 每次写一个byte[]数组
             fos.write(new String("I love China").getBytes());
         }
         catch (Exception e)
